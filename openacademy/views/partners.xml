@@ -45,6 +45,14 @@
                         <field name="email" widget="email" required="context.get('force_email', False)" attrs="{'required': [('user_ids','!=', [])]}"/>
                         <field name="phone" widget="phone"/>
                         <field name="mobile" widget="phone"/>
+                        <field name="is_instructor" />
+                        <field name="session_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="course_id" />
+                                <field name="instructor_id"   />
+                            </tree>
+                        </field>
                     </group>
                 </form>
             </field>
